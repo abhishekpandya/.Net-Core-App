@@ -18,10 +18,16 @@
     //    alert(me.text());
     //})
 
-    var sideBarAndWrapper = $("#sidebar,#wrapper");
+    var $sideBarAndWrapper = $("#sidebar,#wrapper");
 
     $("#sidebarToggle").on("click", function () {
-        sideBarAndWrapper.toggleClass("hide-sidebar");
+        $sideBarAndWrapper.toggleClass("hide-sidebar");
+        if ($sideBarAndWrapper.hasClass("hide-sidebar")) {
+            $(this).text("Show Sidebar")
+        }
+        else {
+            $(this).text("Hide Sidebar")
+        }
     });
     
 
